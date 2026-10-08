@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa Silva | Nails Designer – Palhoça, SC</title>
+<meta name="description" content="Alongamento de unha, esmaltação em gel, manicure, pedicure e spa dos pés em Palhoça, SC. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Grand+Hotel&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosa:#F6B1C2; --rosa-escuro:#d9738f; --lavanda:#DBE2FA;
+  --tinta:#3b3148; --suave:#6b6178; --papel:#fdfbfe; --branco:#fff;
+  --raio:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:400;line-height:1.65;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rosa-escuro);outline-offset:3px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+section{padding:72px 0}
+h2{font-family:'Grand Hotel',cursive;font-weight:400;font-size:clamp(2.4rem,8.5vw,3.3rem);line-height:1.1;text-align:center;margin-bottom:12px}
+.lead{max-width:56ch;margin:0 auto 40px;text-align:center;color:var(--suave)}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 28px;border-radius:999px;background:var(--rosa);color:var(--tinta);font-weight:500;font-size:1.02rem;text-decoration:none;border:0;box-shadow:0 10px 24px -10px rgba(217,115,143,.8);transition:transform .2s,background .2s}
+.btn:hover{background:#f39ab1;transform:translateY(-2px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.sec{background:transparent;box-shadow:none;border:1.5px solid var(--tinta)}
+.btn.sec:hover{background:var(--lavanda)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;min-height:100svh;display:grid;place-items:center;text-align:center;padding:64px 0;background:linear-gradient(180deg,var(--lavanda) 0%,#f3eefb 60%,var(--papel) 100%)}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.75;pointer-events:none}
+.b1{width:340px;height:340px;background:var(--rosa);top:-90px;right:-110px}
+.b2{width:300px;height:300px;background:#bcd0f5;bottom:8%;left:-120px}
+.b3{width:180px;height:180px;background:#f7dcb0;bottom:24%;right:8%;opacity:.45}
+.hero .wrap{position:relative}
+.hero h1{font-weight:300;line-height:1.1}
+.hero h1 .nome{display:block;font-family:'Grand Hotel',cursive;font-weight:400;font-size:clamp(3.4rem,17vw,7rem);line-height:1}
+.hero h1 .titulo{display:block;font-size:clamp(1.2rem,5vw,2rem);letter-spacing:.14em;margin-top:6px}
+.hero p{max-width:34ch;margin:22px auto 34px;font-size:clamp(1.05rem,3.6vw,1.3rem);color:var(--suave)}
+.hero .acoes{display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:flex-start}
+.status{display:inline-block;margin-top:26px;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.7);font-size:.92rem;color:var(--suave)}
+.status b{color:var(--tinta);font-weight:500}
+
+
+
+/* Trabalhos */
+.trabalhos{background:linear-gradient(180deg,var(--papel),#f3f5fd)}
+.galeria{display:grid;gap:18px;grid-template-columns:1fr;max-width:860px;margin:0 auto}
+.galeria figure{border-radius:var(--raio);overflow:hidden;aspect-ratio:1/1;background:var(--lavanda)}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block}
+.trabalhos .btn{display:flex;width:fit-content;margin:36px auto 0}
+@media (min-width:700px){
+  .galeria{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Hero com foto */
+.hero-grid{display:grid;gap:28px;justify-items:center;align-items:center}
+.hero-foto{width:min(220px,56vw);aspect-ratio:3/4;border-radius:200px 200px var(--raio) var(--raio);overflow:hidden;box-shadow:0 0 0 8px rgba(255,255,255,.7),0 24px 40px -20px rgba(217,115,143,.7)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.hero-texto{text-align:center}
+@media (min-width:820px){
+  .hero-grid{grid-template-columns:1.2fr .8fr;gap:64px;justify-items:stretch}
+  .hero-foto{order:2;width:min(380px,100%);justify-self:center}
+  .hero-texto{order:1;text-align:left}
+  .hero-texto p{margin-left:0}
+  .hero .acoes{align-items:flex-start;justify-content:flex-start}
+}
+
+/* Serviços */
+.grade{display:grid;gap:18px;grid-template-columns:1fr}
+.card{display:flex;flex-direction:column;gap:10px;padding:28px 26px;border-radius:var(--raio);background:var(--branco);border:1px solid #eadff2}
+.card:nth-child(odd){background:#f3f5fd}
+.card:nth-child(even){background:#fdf0f4}
+.card .ico{width:52px;height:52px;border-radius:50%;background:var(--branco);display:grid;place-items:center;color:var(--rosa-escuro)}
+.card .ico svg{width:26px;height:26px}
+.card h3{font-weight:500;font-size:1.3rem}
+.card p{color:var(--suave);flex:1}
+.card a{font-weight:500;text-decoration:none;border-bottom:2px solid var(--rosa);align-self:flex-start;padding-bottom:2px}
+.card a:hover{border-color:var(--rosa-escuro)}
+
+/* Horários */
+.horarios{background:linear-gradient(135deg,var(--lavanda),#f9e3ea)}
+.tabela{max-width:520px;margin:0 auto;background:rgba(255,255,255,.8);border-radius:var(--raio);padding:10px 26px}
+.linha{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid #e6dbef}
+.linha:last-child{border:0}
+.linha.hoje{font-weight:500;color:var(--rosa-escuro)}
+.linha.hoje span:first-child::after{content:" (hoje)";font-weight:400}
+.fechado{text-align:center;margin-top:16px;color:var(--suave);font-size:.95rem}
+
+/* Local */
+address{font-style:normal;text-align:center;font-size:1.15rem;line-height:1.8}
+.local .btn{margin:28px auto 0;display:flex;width:fit-content}
+
+/* Contato */
+.contato{background:var(--branco);text-align:center}
+.contatos{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);max-width:960px;margin:0 auto}
+.contatos a:last-child{grid-column:1/-1}
+.contatos a{display:block;padding:16px 14px;font-size:.95rem;border-radius:var(--raio);background:#f3f5fd;text-decoration:none;word-break:break-word}
+.contatos a small{display:block;color:var(--suave);font-size:.85rem}
+.contatos a:hover{background:#fdf0f4}
+@media (min-width:760px){.contatos{grid-template-columns:repeat(3,1fr)}.contatos a:last-child{grid-column:auto}.contatos a{padding:18px 16px;font-size:1rem}}
+footer{padding:34px 0;text-align:center;font-size:.9rem;color:var(--suave);background:var(--lavanda)}
+footer .assina{font-family:'Grand Hotel',cursive;font-size:1.8rem;color:var(--tinta);display:block}
+
+
+@media (min-width:700px){
+  section{padding:96px 0}
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .hero .acoes{flex-direction:row;justify-content:flex-start}
+}
+@media (min-width:960px){.grade{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-foto"><img src="mãe.jpeg" alt="Vanessa Silva, nail designer" width="640" height="853"></div>
+    <div class="hero-texto">
+      <h1><span class="nome">Vanessa Silva</span><span class="titulo">Nails Designer</span></h1>
+      <p>Realçando a sua beleza e a saúde das suas unhas com carinho e dedicação.</p>
+      <div class="acoes">
+        <a class="btn" href="#" data-wpp="Olá, Vanessa! Gostaria de agendar um horário.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-wpp"/></svg>
+          Agende seu Horário pelo WhatsApp
+        </a>
+      </div>
+      <span class="status" id="status" hidden></span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="servicos">
+  <div class="wrap">
+    <h2>Serviços</h2>
+    <p class="lead">Toque em um serviço para pedir seu horário direto no WhatsApp.</p>
+    <div class="grade">
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21V10a4 4 0 0 1 8 0v11"/><path d="M12 3v4M8 14h8"/></svg></div>
+        <h3>Alongamento de unha</h3>
+        <p>Unhas mais longas e resistentes, com formato e acabamento sob medida para você.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Alongamento de unha.">Agendar</a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v5H9z"/><path d="M8 8h8l1 13H7z"/></svg></div>
+        <h3>Esmaltação em gel</h3>
+        <p>Cor intensa, brilho e alta durabilidade, com cuidado para manter a unha saudável.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Esmaltação em gel.">Agendar</a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 4 6 7 6 10.5a6 6 0 0 1-12 0C6 10 8.5 7 12 3z"/><path d="M9.5 14a2.8 2.8 0 0 0 2.5 2.5"/></svg></div>
+        <h3>Banho de gel</h3>
+        <p>Uma camada de gel que reforça a unha natural, com brilho e proteção no dia a dia.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Banho de gel.">Agendar</a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4-3 7-7 10z"/></svg></div>
+        <h3>Manicure</h3>
+        <p>Cuidado completo das mãos e cutículas, para unhas bem tratadas e delicadas.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Manicure.">Agendar</a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-6 5-10z"/></svg></div>
+        <h3>Pedicure</h3>
+        <p>Pés cuidados, unhas bem acabadas e esmaltação com capricho.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Pedicure.">Agendar</a>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4c2 2 2 4 0 6s-2 4 0 6M7 6c1.5 1.5 1.5 3 0 4.5M17 6c1.5 1.5 1.5 3 0 4.5M5 20h14"/></svg></div>
+        <h3>Spa dos pés</h3>
+        <p>Um momento de relaxamento e renovação para os seus pés.</p>
+        <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar Spa dos pés.">Agendar</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="trabalhos" id="trabalhos">
+  <div class="wrap">
+    <h2>Trabalhos feitos</h2>
+    <p class="lead">Alguns dos resultados que já entreguei com muito carinho.</p>
+    <div class="galeria">
+      <figure><img src="Unha.jpeg"></figure>
+      <figure><img src="unha 2.jpeg"></figure>
+    </div>
+    <a class="btn" href="#" data-wpp="Olá, Vanessa! Vi seus trabalhos e gostaria de agendar um horário.">Quero um resultado assim</a>
+  </div>
+</section>
+
+<section class="horarios" id="horarios">
+  <div class="wrap">
+    <h2>Horários de atendimento</h2>
+    <p class="lead">Atendimento com hora marcada.</p>
+    <div class="tabela" id="tabela">
+      <div class="linha" data-dias="1"><span>Segunda-feira</span><span>14:00 às 19:00</span></div>
+      <div class="linha" data-dias="2,3,4,5"><span>Terça a sexta-feira</span><span>09:00 às 19:00</span></div>
+    </div>
+    <p class="fechado">Sábado e domingo: sem atendimento.</p>
+  </div>
+</section>
+
+<section class="local" id="localizacao">
+  <div class="wrap">
+    <h2>Localização</h2>
+    <address>Avenida Rio Grande, 722<br>Rio Grande, Palhoça – SC<br>CEP 88131-600, Brasil</address>
+    <a class="btn sec" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Avenida+Rio+Grande+722+Rio+Grande+Palho%C3%A7a+SC+88131-600">Abrir no Google Maps</a>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap">
+    <h2>Contato</h2>
+    <p class="lead">Vamos conversar? Escolha o canal que for melhor para você.</p>
+    <div class="contatos">
+      <a href="#" data-wpp="Olá, Vanessa! Gostaria de agendar um horário."><small>WhatsApp</small>+55 48 99823-3869</a>
+      <a href="https://instagram.com/vasilvaunhas" target="_blank" rel="noopener"><small>Instagram</small>@vasilvaunhas</a>
+      <a href="mailto:vanesssasilvanailsdesigner@gmail.com"><small>E-mail</small>vanesssasilvanailsdesigner@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="assina">Vanessa Silva</span>
+  Nail Designer · Palhoça, SC<br>
+  © <span id="ano"></span> Todos os direitos reservados.
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wpp" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.2 15l-.3-.18-3.1.82.83-3.03-.2-.31A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.4c-.2 0-.5.07-.75.35-.26.28-1 1-1 2.45s1.03 2.84 1.18 3.04c.14.2 2 3.2 4.9 4.36 2.4.95 2.9.76 3.42.7.52-.05 1.68-.69 1.92-1.35.23-.66.23-1.23.16-1.35-.07-.12-.26-.2-.55-.33-.28-.15-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.29-.73.92-.9 1.1-.16.2-.33.22-.62.08-.28-.15-1.2-.44-2.28-1.4-.85-.76-1.42-1.7-1.58-1.98-.17-.29-.02-.44.12-.58.13-.13.29-.33.43-.5.14-.17.19-.29.28-.48.1-.2.05-.36-.02-.5-.07-.15-.64-1.58-.88-2.16-.23-.56-.47-.48-.64-.49z"/></symbol>
+</svg>
+
+<script>
+(function(){
+  var NUMERO = "5548998233869";
+  // Links do WhatsApp com mensagem pronta
+  document.querySelectorAll("[data-wpp]").forEach(function(a){
+    a.href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(a.dataset.wpp);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.getElementById("ano").textContent = new Date().getFullYear();
+
+  // Destaca o dia de hoje e mostra se está aberto
+  var agora = new Date(), dia = agora.getDay(), min = agora.getHours()*60 + agora.getMinutes();
+  document.querySelectorAll(".linha").forEach(function(l){
+    if (l.dataset.dias.split(",").indexOf(String(dia)) > -1) l.classList.add("hoje");
+  });
+  var abre = dia === 1 ? 14*60 : (dia >= 2 && dia <= 5 ? 9*60 : null), fecha = 19*60;
+  var s = document.getElementById("status");
+  if (abre !== null && min >= abre && min < fecha) s.innerHTML = "<b>Aberto agora</b> · atende até as 19:00";
+  else s.innerHTML = "<b>Fechado agora</b> · veja os horários abaixo";
+  s.hidden = false;
+})();
+</script>
+</body>
+</html>
